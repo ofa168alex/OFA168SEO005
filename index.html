@@ -268,18 +268,20 @@
     .hero-card {
       position: relative;
       border-radius: 24px;
-      overflow: hidden;
+       overflow: visible;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
       box-shadow: var(--shadow);
     }
 
-    .hero-image {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      background: #111;
+.hero-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  background: #000;
+  padding: 10px;
+  border-radius: 20px;
+
     }
 
     .offer-strip {
