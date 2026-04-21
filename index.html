@@ -578,36 +578,53 @@
       text-align: center;
     }
 
-    .floating-actions {
-      position: fixed;
-      right: 18px;
-      bottom: 86px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 999;
-    }
+.floating-actions {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 999;
+}
 
-    .floating-btn {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 24px;
-      color: #fff;
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: var(--shadow);
-      transition: .25s ease;
-    }
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
 
-    .floating-btn:hover {
-      transform: translateY(-3px) scale(1.04);
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    .wa { background: var(--green); }
-    .tg { background: var(--telegram); }
-    .reg { background: linear-gradient(135deg, var(--gold), var(--gold-2)); color: #000; }
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  transition: all 0.25s ease;
+}
+
+/* 注册 */
+.reg {
+  background: linear-gradient(135deg, gold, orange);
+  color: #000;
+}
+
+/* WhatsApp */
+.wa {
+  background: #25D366;
+}
+
+/* Telegram */
+.tg {
+  background: #229ED9;
+}
+
+/* hover效果 */
+.floating-btn:hover {
+  transform: scale(1.1);
+}
 
     /* 假实时赢奖滚动 */
     .ticker-wrap {
@@ -1031,10 +1048,37 @@
   </footer>
 
   <div class="floating-actions">
-    <a id="floatingRegisterBtn" class="floating-btn reg" href="https://bang004.ofa168my.net/login?id=register" target="_blank" rel="noopener noreferrer" title="Register">★</a>
-    <a id="floatingWhatsappBtn" class="floating-btn wa" href="#" target="_blank" rel="noopener noreferrer" title="WhatsApp">✆</a>
-    <a id="floatingTelegramBtn" class="floating-btn tg" href="#" target="_blank" rel="noopener noreferrer" title="Telegram">➤</a>
-  </div>
+
+  <!-- 注册 -->
+  <a class="floating-btn reg"
+     href="https://bang004.ofa168my.net/login?id=register"
+     target="_blank">
+    ★
+  </a>
+
+  <!-- WhatsApp -->
+  <a class="floating-btn wa"
+     href="https://wa.link/kf9ddk"
+     target="_blank">
+
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path d="M12 2C6.48 2 2 6.26 2 11.5c0 2.02.68 3.88 1.84 5.39L2 22l5.27-1.72A10.3 10.3 0 0012 21c5.52 0 10-4.26 10-9.5S17.52 2 12 2zm0 17c-1.53 0-3.03-.4-4.35-1.16l-.31-.18-3.13 1.02 1.03-3.04-.2-.32A7.5 7.5 0 014.5 11.5C4.5 7.36 7.91 4 12 4s7.5 3.36 7.5 7.5S16.09 19 12 19z"/>
+    </svg>
+
+  </a>
+
+  <!-- Telegram -->
+  <a class="floating-btn tg"
+     href="https://t.me/ofa288"
+     target="_blank">
+
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white">
+      <path d="M22 2L2 11l5.5 2L10 19l2.5-4.5L18 22l4-20z"/>
+    </svg>
+
+  </a>
+
+</div>
 
   <div class="ticker-wrap">
     <div class="ticker-track" id="tickerTrack">
